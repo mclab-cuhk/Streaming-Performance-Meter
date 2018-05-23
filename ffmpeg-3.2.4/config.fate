@@ -1,0 +1,1 @@
+config:x86:x86_64:generic:linux:gcc 4.8.2 (GCC) 20140120 (Red Hat 4.8.2-15):--enable-libfreetype --enable-gpl --enable-libx264 --disable-ffprobe --disable-ffserver --disable-debug

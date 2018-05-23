@@ -1,0 +1,4 @@
+
+
+gcc -Llibavcodec -Llibavdevice -Llibavfilter -Llibavformat -Llibavresample -Llibavutil -Llibpostproc -Llibswscale -Llibswresample -Wl,--as-needed -Wl,-z,noexecstack -Wl,--warn-common -Wl,-rpath-link=libpostproc:libswresample:libswscale:libavfilter:libavdevice:libavformat:libavcodec:libavutil:libavresample   -o ffmpeg cmdutils.o ffmpeg_opt.o ffmpeg_filter.o ffmpeg.o   -lavdevice -lavfilter -lavformat -lavcodec -lpostproc -lswresample -lswscale -lavutil -lXv -lX11 -lXext -ldl -lxcb -lxcb-shm -lxcb -lxcb-xfixes -lxcb-render -lxcb-shape -lxcb -lxcb-shape -lxcb -lX11 -lasound -lfreetype libx264.a libquirc.a libbarcode.a libzbar.a -lm -llzma -lSDL2 -lbz2 -lz -pthread -lrt
+

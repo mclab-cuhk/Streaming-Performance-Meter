@@ -1,0 +1,4 @@
+
+
+./configure --enable-libfreetype --enable-gpl --enable-libx264 --disable-ffprobe --disable-ffserver --disable-debug    
+
