@@ -1,0 +1,15 @@
+
+Below is an example for decoding from the captured playback the frame information barcode:
+The frame number information and wall clock timestamps are emitted in each row of successful decode.
+The channel mixer video filter is used as pre-processing to enhance the contrast of the barcode.
+
+
+------------------------------CUT HERE------------------------------
+
+SRCFILE=$1        # captured playback of the generated bluray pseudo video on say, mobile phone
+
+ffmpeg -i $SRCFILE -vf "[in] colorchannelmixer=.3:.4:.3:0:.3:.4:.3:0:.3:.4:.3 [imm] ; [imm] drawtext=fontfile=../font.ttf:text='00000000000000000000000000000':fontcolor=yellow:fontsize=36:box=0:x=10:y=10 [out]" \
+-vcodec h264 -preset superfast -y xxx.mp4 | grep BARCODE
+
+------------------------------CUT HERE------------------------------
+
