@@ -1,0 +1,16 @@
+
+The Movie Bitrate ReConstructor is a workflow for generating pseudo movie and investigate different aspects during streaming playback.
+
+In general it includes the following steps:
+
+1. Generate / Encode a pseudo high bit rate bluray movie by the modified encoder, according to bitrate data acquired from real
+bluray bitrate traces. This step embeds barcode with per frame information of the original bluray movie into the encoded frames.
+
+2. Set up a desired network environment to stream and playback the pseudo movie on your desired devices, e.g. mobile 3G 4G network
+and a suitable mobile handset. During the playback of the movie it may encounter different rebuffering and/or suspension. The
+whole playback is filmed unattended by another camera and this recorded movie will be analysed.
+
+3. The captured playback video in step 2 will be passed through the modified decoder to decode the recorded barcodes for data
+showing the pseudo movie's actual playback time and frame correlation. This data can be fed into different analysers for calculating
+playback statistics like QoE values.
+
