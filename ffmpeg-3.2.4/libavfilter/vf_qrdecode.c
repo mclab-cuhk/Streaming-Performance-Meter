@@ -158,7 +158,7 @@ static int filter_frame(AVFilterLink *inlink, AVFrame *in)
 			{
 				zbar_symbol_type_t typ = zbar_symbol_get_type(symbol);
 				const char *data = zbar_symbol_get_data(symbol);
-				fprintf(stdout, "frame %06d-%d BARCODE decoded %s symbol \"%s\"\n", inlink->frame_count, i++, zbar_get_symbol_name(typ), data);
+				fprintf(stdout, "frame %06d-%d,%-7s BARCODE decoded %s symbol \"%s\"\n", inlink->frame_count, i++, av_ts2timestr(in->pts, &inlink->time_base), zbar_get_symbol_name(typ), data);
 				fflush(stdout);
 			}
 
